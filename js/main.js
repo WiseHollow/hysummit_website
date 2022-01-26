@@ -1,7 +1,7 @@
 // If you don't want the particles, change the following to false
 const doParticles = false;
 // If you don't want player count fetched, set to false
-const fetchPlayerCount = false;
+const doFetchPlayerCount = false;
 
 
 
@@ -55,21 +55,22 @@ $(document).on("click", ".ip", () => {
 });
 
 // This is to fetch the player count
-$(document).ready(() => {
-    if (fetchPlayerCount) {
-        let ip = $(".sip").attr("data-ip");
-        let port = $(".sip").attr("data-port");
-        if (port == "" || port == null) port = "25565";
-        if (ip == "" || ip == null) return console.error("Error fetching player count - is the IP set correctly in the HTML?");
-        updatePlayercount(ip, port);
-        // Updates every minute (not worth changing due to API cache)
-        setInterval(() => {
-            updatePlayercount(ip, port);
-        }, 60000);
-    }
-});
+if (doFetchPlayerCount) {
+    $(document).ready(() => {
+            let ip = $(".sip").attr("data-ip");
+            let port = $(".sip").attr("data-port");
+            if (port == "" || port == null) port = "25565";
+            if (ip == "" || ip == null) return console.error("Error fetching player count - is the IP set correctly in the HTML?");
+            updatePlayerCount(ip, port);
+            // Updates every minute (not worth changing due to API cache)
+            setInterval(() => {
+                updatePlayerCount(ip, port);
+            }, 60000);
+    });
+}
 
-const updatePlayercount = (ip, port) => {
+
+const updatePlayerCount = (ip, port) => {
     $.get(`https://api.bybilly.uk/api/players/${ip}/${port}`, (result) => {
         if (result.hasOwnProperty('online')) {
             $(".sip").html(result.online);

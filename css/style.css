@@ -22,7 +22,7 @@
 /* ------------------------------------- */
 /* http://bourbon.io/ Sass Mixin Library */
 /* custom CSS files */
-@import url(font-awesome.min.css);
+@import url('../dist/fontawesome/css/fontawesome.min.css');
 @import url(ionicons.min.css);
 @import url('../dist/bootstrap/css/bootstrap.min.css');
 @import url(animate.css);

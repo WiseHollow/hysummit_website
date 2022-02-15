@@ -23,7 +23,7 @@ if (doParticles) {
 // This is for the click to copy
 let t;
 $(document).ready(()=>{
-	t = $(".ip").html();
+	t = 'play.hysummit.net';
 })
 $(document).on("click",".ip",()=>{
 	let copy = document.createElement("textarea");
@@ -45,8 +45,8 @@ $(document).on("click",".ip",()=>{
 
 // This is to fetch the player count
 $(document).ready(()=>{
-  const ip = $(".sip").attr("data-ip");
-  const port = $(".sip").attr("data-port");
+  const ip = 'play.hysummit.net'
+  const port = '25565';
 
   $.get(`https://mcapi.us/server/status?ip=${ip}&port=${port}`, (result)=>{
     if (result.online) {

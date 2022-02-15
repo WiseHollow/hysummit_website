@@ -25,6 +25,7 @@
 @import url('../dist/fontawesome/css/fontawesome.min.css');
 @import url(ionicons.min.css);
 @import url('../dist/bootstrap/css/bootstrap.min.css');
+@import url('../dist/bootstrap/css/theme.css');
 @import url(animate.css);
 @import url(photoswipe.css);
 @import url(default-skin/default-skin.css);

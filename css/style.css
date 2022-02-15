@@ -1925,6 +1925,10 @@ footer p {
   margin-bottom: 2%; /* (100-32*3)/2 */
 }
 
+.footer-display {
+  margin-bottom: 4%;
+}
+
 /* Modals */
 /* The Modal (background) */
 .modal {

@@ -85,13 +85,13 @@
 						<a href="https://forum.hysummit.net" class="light-btn btn-block text-intro opacity-0 w-100">FORUM</a>
 					</div>
 					<div class="flex-item">
-						<a id="featuresBtn" class="light-btn btn-block text-intro opacity-0 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">FEATURES</a>
+						<a id="featuresBtn" class="light-btn btn-block text-intro opacity-0 w-100" data-js-toggle="modal" data-js-target="#featuresModal">FEATURES</a>
 					</div>
 					<div class="flex-item">
 						<a href="https://store.hysummit.net" class="action-btn btn-block trigger text-intro opacity-0 w-100">DONATE</a>
 					</div>
 					<div class="flex-item">
-						<a id="ranksBtn" class="light-btn btn-block text-intro opacity-0 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">RANKS</a>
+						<a id="ranksBtn" class="light-btn btn-block text-intro opacity-0 w-100" data-js-toggle="modal" data-js-target="#ranksModal">RANKS</a>
 					</div>
 				</div>
 
@@ -118,6 +118,318 @@
 			<p style="color:white">Mojang © 2009-2021. "Minecraft" is a trademark of Mojang AB</p>
 
 		</footer>
+
+		<!-- Features Modal -->
+		<div id="featuresModal" class="modal">
+			<div class="modal-content">
+				<div align="right">
+					<span class="close">
+						<i class="fa-solid fa-xmark"></i>
+					</span>
+				</div>
+
+				<div class="container text-white">
+					<div class="row mb-3">
+						<div class="col-4">
+							<div class="card bg-dark">
+								<img class="img-fluid rounded" src="img/features/claims-menu.jpg" />
+							</div>
+						</div>
+						<div class="col-6">
+							<h1 class="display-6 mb-3">
+							  Claims
+							  <small class="text-muted">Custom Plugin</small>
+							</h1>
+
+							<p class="mb-3">
+								Creating a Claim is likely one of the first things you'll want
+								to do in the survival world. Here is a brief summary of how
+								some feature of claims work.
+							</p>
+
+							<h4 class="mb-3">General Explanation</h4>
+							<ol class="list-group list-group-flush mb-3">
+								<li class="list-group-item bg-transparent text-white-50">Create a new Claim with the command <b>/CLAIM DEFINE.</b></li>
+								<li class="list-group-item bg-transparent text-white-50">Opening the Claim Editor can be done with the command <b>/CLAIM</b>.</li>
+								<li class="list-group-item bg-transparent text-white-50">Claims cost <b>8 money</b> per horizontal block being claimed. The price will always be subject to change.</li>
+								<li class="list-group-item bg-transparent text-white-50">Redefining a claims boundaries will <b>debit/credit your wallet</b> depending on if the claim is larger or smaller than before.</li>
+								<li class="list-group-item bg-transparent text-white-50">Player and Guest permissions are set by the owner of the claim. An explanation of flags will be explained below.</li>
+							</ol>
+
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-6">
+							<h4 class="mb-3">Claim Flags</h4>
+							<p class="mb-3">
+								Flags are useful to restrict certain abilities within the
+								boundaries of your claim. All but the first three flags cost
+								money. Buying them will enable them permanently within that
+								claim. Abandoning your claim will not result in a credit of
+								those enabled flags.
+							</p>
+							<p class="mb-3">
+								A list of currently supported flags are-
+							</p>
+							<ol class="list-group list-group-flush mb-3">
+								<li class="list-group-item bg-transparent text-white-50">Build</li>
+								<li class="list-group-item bg-transparent text-white-50">Chest Access</li>
+								<li class="list-group-item bg-transparent text-white-50">Interact</li>
+								<li class="list-group-item bg-transparent text-white-50">Chorus Fruit Teleport</li>
+								<li class="list-group-item bg-transparent text-white-50">Ender Pearl Teleport</li>
+								<li class="list-group-item bg-transparent text-white-50">Damage Animals</li>
+								<li class="list-group-item bg-transparent text-white-50">Pickup Items</li>
+								<li class="list-group-item bg-transparent text-white-50">Throw Items</li>
+								<li class="list-group-item bg-transparent text-white-50">Explosives</li>
+								<li class="list-group-item bg-transparent text-white-50">Monster Spawning</li>
+								<li class="list-group-item bg-transparent text-white-50">Animal Spawning</li>
+							</ol>
+
+						</div>
+						<div class="col-4">
+							<div class="card bg-dark">
+								<img class="img-fluid rounded" src="img/features/claims-flags-menu.jpg" />
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col-4">
+							<div class="card bg-dark">
+								<img class="img-fluid rounded" src="img/features/equipment-extensions.jpg" />
+							</div>
+						</div>
+						<div class="col-6">
+							<h1 class="display-6 mb-3">
+							  Equipment Extensions
+							  <small class="text-muted">Custom Plugin</small>
+							</h1>
+
+							<p class="mb-3">
+								Plain vanilla equipment stats are boring. That's why I created
+								a plugin that adds a bit more wonder to items in the game. All
+								weapons and armor in the game will have modified attributes
+								from the "Variant" or "Title" given to the item's name. For
+								example: Great! has a set of attributes that modify a weapon
+								or armor. It'll automatically take effect depending on which
+								it's bound to.
+							</p>
+
+							<h4 class="mb-3">Variant Ranks</h4>
+							<p class="mb-3">
+								The list of available ranks are: <b>F → D → C → B → A → S → SS → SSS</b>
+							</p>
+							<p class="mb-3">
+								With F being a horrible rank that will result in you being
+								overall weaker than without the item, and C being around
+								vanilla stats. Everything B and after result in stronger
+								overall stats.
+							</p>
+							<p class="mb-3">
+								Below are ranks with their distribution weight, mob's chance
+								to drop an item, and chance for Variant to appear in the world.
+							</p>
+
+							<ol class="list-group list-group-flush mb-3">
+								<li class="list-group-item d-flex justify-content-between align-items-center bg-transparent text-white-50">
+									SSS <b>Weight 1 & Item Drop Chance 10%</b>
+									<span class="badge bg-primary rounded-pill">0.08%</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center bg-transparent text-white-50">
+									SS <b>Weight 5 & Item Drop Chance 10%</b>
+									<span class="badge bg-primary rounded-pill">0.4%</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center bg-transparent text-white-50">
+									S <b>Weight 15 & Item Drop Chance 10%</b>
+									<span class="badge bg-primary rounded-pill">1.2%</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center bg-transparent text-white-50">
+									A <b>Weight 100 & Item Drop Chance 8.5%</b>
+									<span class="badge bg-primary rounded-pill">8%</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center bg-transparent text-white-50">
+									B <b>Weight 200 & Item Drop Chance 7.5%</b>
+									<span class="badge bg-primary rounded-pill">16%</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center bg-transparent text-white-50">
+									C <b>Weight 400 & Item Drop Chance 5%</b>
+									<span class="badge bg-primary rounded-pill">32%</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center bg-transparent text-white-50">
+									D <b>Weight 300 & Item Drop Chance 3.5%</b>
+									<span class="badge bg-primary rounded-pill">24%</span>
+								</li>
+								<li class="list-group-item d-flex justify-content-between align-items-center bg-transparent text-white-50">
+									F <b>Weight 200 & Item Drop Chance 2.5%</b>
+									<span class="badge bg-primary rounded-pill">16%</span>
+								</li>
+							</ol>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-6">
+							<h1 class="display-6 mb-3">
+								Biome Portals
+								<small class="text-muted">Custom Plugin</small>
+							</h1>
+
+							<p class="mb-3">
+								What if you could get an alert in advanced of a portal that
+								will teleport you to the biome you're looking for? That's what
+								you'll find with our <b>Biome Portals</b>. Every hour of the day, the
+								portal at spawn will update to a new location and biome. A
+								broadcast in chat and Discord will alert players of it's new
+								destination.
+							</p>
+
+							<p class="mb-3">
+								Example broadcast
+							</p>
+
+							<blockquote class="blockquote mb-3">
+							  <p>Biome Portal destination is now MOOSHROOM ISLAND</p>
+							</blockquote>
+
+							<p class="mb-3">
+								The portal at spawn will transform into a design that reflects
+								the destination. There is no guessing what you'll meet on the
+								other side.
+							</p>
+
+							<ol class="list-group list-group-flush mb-3">
+								<li class="list-group-item bg-transparent text-white-50">Plains</li>
+								<li class="list-group-item bg-transparent text-white-50">Birch Forest</li>
+								<li class="list-group-item bg-transparent text-white-50">Oak Forest</li>
+								<li class="list-group-item bg-transparent text-white-50">Savanna</li>
+								<li class="list-group-item bg-transparent text-white-50">Ice Spikes</li>
+								<li class="list-group-item bg-transparent text-white-50">Mushroom Fields</li>
+								<li class="list-group-item bg-transparent text-white-50">Flower Forest</li>
+								<li class="list-group-item bg-transparent text-white-50">Deep Cold Ocean</li>
+								<li class="list-group-item bg-transparent text-white-50">And many more..</li>
+							</ol>
+						</div>
+						<div class="col-4">
+							<div class="card bg-dark">
+								<img class="img-fluid rounded" src="img/features/biome-portal.jpg" />
+							</div>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-4">
+							<div class="card bg-dark">
+								<img class="img-fluid rounded" src="img/features/biome-chooser.jpg" />
+							</div>
+						</div>
+						<div class="col-6">
+							<h4>Biome Chooser</h4>
+
+							<p class="mb-3">
+								A Villager NPC stands in front of the portal awaiting players
+								to trigger addition random destinations. Interacting with the
+								NPC, you'll be presented with a shop interface. At the cost of
+								ingame cash, you can roll the dice and get a new destination.
+								Be aware, there is a cooldown for this action.
+							</p>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-6">
+							<h1 class="display-6 mb-3">
+								Pets
+								<!-- <small class="text-muted"></small> -->
+							</h1>
+
+							<p class="mb-3">
+								Do you want a loyal buddy following you around? With our server
+								<b>Pets</b> you can have exactly that. Not only can you Name
+								them, but you can ride and do all sorts of things. Some Pets
+								give you the freedom to even fly around.
+							</p>
+
+							<h4 class="mb-3">Commands</h4>
+
+							<ol class="list-group list-group-flush mb-3">
+								<li class="list-group-item bg-transparent text-white-50"><b>/pet</b> - Opens the Pet GUI.</li>
+								<li class="list-group-item bg-transparent text-white-50"><b>/pet help</b> - List details on pet commands</li>
+								<li class="list-group-item bg-transparent text-white-50"><b>/pet ride</b> - Toggle riding your pet</li>
+								<li class="list-group-item bg-transparent text-white-50"><b>/pet hat</b> - Toggle wearing your pet on your head</li>
+								<li class="list-group-item bg-transparent text-white-50"><b>/pet list</b> - Lists all the pets allowed on the server</li>
+							</ol>
+
+							<h4 class="mb-3">Pet Customizations</h4>
+
+							<p class="mb-3">
+								Once you right-click on your pet, you'll be presented with the
+								<b>Pet Data Changer</b>. This lets you apply visual
+								customizations to your pet. The options are different among
+								each pet, which is all the more reason to <b>rank up</b> and get
+								access to even more pets.
+							</p>
+
+							<ol class="list-group list-group-flush mb-3">
+								<li class="list-group-item bg-transparent text-white-50">Name your pet (with chat colors)</li>
+								<li class="list-group-item bg-transparent text-white-50">Baby/Adult</li>
+								<li class="list-group-item bg-transparent text-white-50">Appear on fire or not</li>
+								<li class="list-group-item bg-transparent text-white-50">Appear frozen or not (visibly shaking) </li>
+								<li class="list-group-item bg-transparent text-white-50">Some pets have color choices</li>
+								<li class="list-group-item bg-transparent text-white-50">Ability to ride the pet</li>
+								<li class="list-group-item bg-transparent text-white-50">Ability to wear the pet as a hat</li>
+								<li class="list-group-item bg-transparent text-white-50">And many more..</li>
+							</ol>
+						</div>
+						<div class="col-4">
+							<div class="card bg-dark">
+								<img class="img-fluid rounded" src="img/features/pets-lucy.jpg" />
+							</div>
+						</div>
+					</div>
+
+					<div class="row mb-3">
+						<div class="col-4">
+							<div class="card bg-dark">
+								<img class="img-fluid rounded" src="img/features/money-drop.jpg" />
+							</div>
+						</div>
+						<div class="col-6">
+							<h1 class="display-6 mb-3">
+								Getting Money
+								<!-- <small class="text-muted"></small> -->
+							</h1>
+
+							<p class="mb-3">
+								There are a few ways to get ingame money while playing. Selling
+								items at spawn, or creating your own shop are two methods.
+								Another method is to defeat mobs around the survival world.
+							</p>
+
+							<p class="mb-3">
+								To sell items to NPCs, you must find the correct shop to sell
+								to. Not all items in the game can be purchased and sold, but
+								most that require a degree of grinding are sellable. For
+								example, you can sell carrots and other crops at the grocery
+								store.
+							</p>
+
+							<p class="mb-3">
+								To create your own player shop; either head to the dock at
+								spawn-town to rent a space, or create one in the survival
+								world. There are directions on how to do this at the docks.
+							</p>
+
+							<p class="mb-3">
+								Lastly, defeated mobs drop a sunflower item. Picking it up will
+								reward you with a range of ingame money. Please note that mobs
+								from a spawner <b>will not</b> drop money.
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
 
 		<!-- Ranks Modal -->
 		<div id="ranksModal" class="modal">
